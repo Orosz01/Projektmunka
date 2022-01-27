@@ -1,0 +1,14 @@
+body{ background-color: rgb(235, 207, 51);
+}
+.topnav{background-color: rgb(236, 30, 30);
+    color:black;
+    padding: 15px;
+    font-size:25px;
+    margin:-8px;
+    word-spacing: 25px;
+    text-indent: 15px;
+
+}
+a{text-decoration:none;
+    color:black;
+    font-family: 'Supermercado One';
