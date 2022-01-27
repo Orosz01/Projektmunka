@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gyűjtűk Kereskedése</title>
-	<link rel="stylesheet" href="kinezet.css">
+	<link rel="stylesheet" href="html/kinezet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
