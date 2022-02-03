@@ -48,7 +48,7 @@
 .topnav{background-color: rgb(223, 19, 19);
     color:black;
     padding: 10px;
-    font-size:25px;
+    font-size:27px;
     margin:0px;
     word-spacing: 25px;
     text-indent: 15px;
@@ -57,6 +57,7 @@
 .topnav a{text-decoration:none;
     color:black;
     font-family: 'Supermercado One';
+    
 }
 
 .sidenav {
@@ -64,7 +65,7 @@
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 70px;
+    top: 73px;
     left: 0;
     background-color: rgb(135, 240, 240);
     overflow-x: hidden;
