@@ -9,13 +9,22 @@
             foreach($menupontok as $key => $value){
                 $active = '';
                 if($_SERVER['REQUEST_URI'] == '/Projektmunka/'.$key) $active = 'active';
-                if($key == 'felhasznalo') $key.='&action='.$action;
+                if($key == 'logout' ){
+                  ?>
+                  <li id="ki" class="nav-item <?php echo $active; ?>">
+                  <a class="nav-link" href="index.php?page=fooldal&action=logout"><?php echo $value; ?></a>
+            </li>
+            <?php
+                }else{
+
+                
             ?>
             <li class="nav-item <?php echo $active; ?>">
                     <a class="nav-link" href="index.php?page=<?php echo $key; ?>"><?php echo $value; ?></a>
             </li>
             <?php
-                }
+                }  
+              }
          ?>
       </ul>
     </div>

@@ -28,16 +28,16 @@ class User{
     public function get_id() {
         return $this->id;
     }
-    public function get_nev() {
+    public function get_username() {
         return $this->username;
     }
-    public function get_jelszo() {
+    public function get_pasword() {
         return $this->pasword;
     }
     public function get_email() {
         return $this->email;
     }
-    public function tanlista($conn){
+    public function userslist($conn){
         $lista = array();
         $sql = "SELECT F_Id FROM felhasznalok";
         if($result = $conn-> query($sql)){
