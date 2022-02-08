@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Gép: localhost
--- Létrehozás ideje: 2022. Jan 20. 08:08
--- Kiszolgáló verziója: 10.3.29-MariaDB-0+deb10u1
--- PHP verzió: 7.4.23
+-- Gép: 127.0.0.1
+-- Létrehozás ideje: 2022. Feb 08. 09:39
+-- Kiszolgáló verziója: 10.4.21-MariaDB
+-- PHP verzió: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `c31k202121`
+-- Adatbázis: `program`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `Egyeb termekek`
+-- Tábla szerkezet ehhez a táblához `egyeb termekek`
 --
 
-CREATE TABLE `Egyeb termekek` (
+CREATE TABLE `egyeb termekek` (
   `Termek azonosito` varchar(200) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `Termek nev` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `F_Id` varchar(10) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
@@ -37,23 +37,23 @@ CREATE TABLE `Egyeb termekek` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `Felhasznalok`
+-- Tábla szerkezet ehhez a táblához `felhasznalok`
 --
 
-CREATE TABLE `Felhasznalok` (
+CREATE TABLE `felhasznalok` (
   `F_Id` varchar(15) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `username` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
-  `password` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
+  `pasword` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `email` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `Kartyak`
+-- Tábla szerkezet ehhez a táblához `kartyak`
 --
 
-CREATE TABLE `Kartyak` (
+CREATE TABLE `kartyak` (
   `Termek azonosito` varchar(200) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `Termek nev` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `F_Id` varchar(10) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
@@ -64,10 +64,10 @@ CREATE TABLE `Kartyak` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `Kartya_Kat`
+-- Tábla szerkezet ehhez a táblához `kartya_kat`
 --
 
-CREATE TABLE `Kartya_Kat` (
+CREATE TABLE `kartya_kat` (
   `id` int(10) NOT NULL,
   `nev` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -75,10 +75,10 @@ CREATE TABLE `Kartya_Kat` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `Penznem`
+-- Tábla szerkezet ehhez a táblához `penznem`
 --
 
-CREATE TABLE `Penznem` (
+CREATE TABLE `penznem` (
   `Termek azonosito` varchar(200) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `Termek nev` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `F_Id` varchar(10) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
@@ -89,10 +89,10 @@ CREATE TABLE `Penznem` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `Penz_Kat`
+-- Tábla szerkezet ehhez a táblához `penz_kat`
 --
 
-CREATE TABLE `Penz_Kat` (
+CREATE TABLE `penz_kat` (
   `id` int(5) NOT NULL,
   `nev` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -100,10 +100,10 @@ CREATE TABLE `Penz_Kat` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `Tazok`
+-- Tábla szerkezet ehhez a táblához `tazok`
 --
 
-CREATE TABLE `Tazok` (
+CREATE TABLE `tazok` (
   `Termek azonosito` varchar(200) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `Termek nev` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
   `F_Id` varchar(10) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
@@ -114,10 +114,10 @@ CREATE TABLE `Tazok` (
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `Tazo_Kat`
+-- Tábla szerkezet ehhez a táblához `tazo_kat`
 --
 
-CREATE TABLE `Tazo_Kat` (
+CREATE TABLE `tazo_kat` (
   `id` int(11) NOT NULL,
   `nev` text CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -127,74 +127,78 @@ CREATE TABLE `Tazo_Kat` (
 --
 
 --
--- A tábla indexei `Egyeb termekek`
+-- A tábla indexei `egyeb termekek`
 --
-ALTER TABLE `Egyeb termekek`
+ALTER TABLE `egyeb termekek`
   ADD PRIMARY KEY (`Termek azonosito`),
   ADD KEY `F_Id` (`F_Id`);
 
 --
--- A tábla indexei `Felhasznalok`
+-- A tábla indexei `felhasznalok`
 --
-ALTER TABLE `Felhasznalok`
+ALTER TABLE `felhasznalok`
   ADD PRIMARY KEY (`F_Id`);
 
 --
--- A tábla indexei `Kartyak`
+-- A tábla indexei `kartyak`
 --
-ALTER TABLE `Kartyak`
+ALTER TABLE `kartyak`
   ADD PRIMARY KEY (`Termek azonosito`),
   ADD KEY `F_Id` (`F_Id`),
   ADD KEY `K_id` (`K_id`);
 
 --
--- A tábla indexei `Kartya_Kat`
+-- A tábla indexei `kartya_kat`
 --
-ALTER TABLE `Kartya_Kat`
+ALTER TABLE `kartya_kat`
   ADD PRIMARY KEY (`id`);
 
 --
--- A tábla indexei `Penznem`
+-- A tábla indexei `penznem`
 --
-ALTER TABLE `Penznem`
+ALTER TABLE `penznem`
   ADD PRIMARY KEY (`Termek azonosito`),
   ADD KEY `F_Id` (`F_Id`),
   ADD KEY `K_id` (`K_id`);
 
 --
--- A tábla indexei `Penz_Kat`
+-- A tábla indexei `penz_kat`
 --
-ALTER TABLE `Penz_Kat`
+ALTER TABLE `penz_kat`
   ADD PRIMARY KEY (`id`);
 
 --
--- A tábla indexei `Tazok`
+-- A tábla indexei `tazok`
 --
-ALTER TABLE `Tazok`
+ALTER TABLE `tazok`
   ADD PRIMARY KEY (`Termek azonosito`),
   ADD KEY `F_Id` (`F_Id`),
   ADD KEY `K_id` (`K_id`);
 
 --
--- A tábla indexei `Tazo_Kat`
+-- A tábla indexei `tazo_kat`
 --
-ALTER TABLE `Tazo_Kat`
+ALTER TABLE `tazo_kat`
   ADD PRIMARY KEY (`id`);
 
 --
 -- A kiírt táblák AUTO_INCREMENT értéke
 --
 
+ALTER TABLE `felhasznalok`
+  MODIFY `F_Id` int(10) NOT NULL AUTO_INCREMENT;
+
+
 --
--- AUTO_INCREMENT a táblához `Kartya_Kat`
+-- AUTO_INCREMENT a táblához `kartya_kat`
 --
-ALTER TABLE `Kartya_Kat`
+ALTER TABLE `kartya_kat`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT a táblához `Tazo_Kat`
+-- AUTO_INCREMENT a táblához `tazo_kat`
 --
-ALTER TABLE `Tazo_Kat`
+ALTER TABLE `tazo_kat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -202,31 +206,36 @@ ALTER TABLE `Tazo_Kat`
 --
 
 --
--- Megkötések a táblához `Felhasznalok`
+-- Megkötések a táblához `egyeb termekek`
 --
-ALTER TABLE `Felhasznalok`
-  ADD CONSTRAINT `asz` FOREIGN KEY (`F_Id`) REFERENCES `Tazok` (`F_Id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fe` FOREIGN KEY (`F_Id`) REFERENCES `Kartyak` (`F_Id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `felhasznalo` FOREIGN KEY (`F_Id`) REFERENCES `Egyeb termekek` (`F_Id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `lh` FOREIGN KEY (`F_Id`) REFERENCES `Penznem` (`F_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `egyeb termekek`
+  ADD CONSTRAINT `id` FOREIGN KEY (`F_Id`) REFERENCES `felhasznalok` (`F_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Megkötések a táblához `Kartyak`
+-- Megkötések a táblához `kartyak`
 --
-ALTER TABLE `Kartyak`
-  ADD CONSTRAINT `Kartyak_ibfk_1` FOREIGN KEY (`K_id`) REFERENCES `Kartya_Kat` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `kartyak`
+  ADD CONSTRAINT `Kartyak_ibfk_1` FOREIGN KEY (`K_id`) REFERENCES `kartya_kat` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `ide` FOREIGN KEY (`F_Id`) REFERENCES `felhasznalok` (`F_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Megkötések a táblához `Penz_Kat`
+-- Megkötések a táblához `penznem`
 --
-ALTER TABLE `Penz_Kat`
-  ADD CONSTRAINT `Penz_Kat_ibfk_1` FOREIGN KEY (`id`) REFERENCES `Penznem` (`K_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `penznem`
+  ADD CONSTRAINT `ided` FOREIGN KEY (`F_Id`) REFERENCES `felhasznalok` (`F_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Megkötések a táblához `Tazok`
+-- Megkötések a táblához `penz_kat`
 --
-ALTER TABLE `Tazok`
-  ADD CONSTRAINT `Tazok_ibfk_1` FOREIGN KEY (`K_id`) REFERENCES `Tazo_Kat` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `penz_kat`
+  ADD CONSTRAINT `Penz_Kat_ibfk_1` FOREIGN KEY (`id`) REFERENCES `penznem` (`K_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Megkötések a táblához `tazok`
+--
+ALTER TABLE `tazok`
+  ADD CONSTRAINT `Tazok_ibfk_1` FOREIGN KEY (`K_id`) REFERENCES `tazo_kat` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `ideide` FOREIGN KEY (`F_Id`) REFERENCES `felhasznalok` (`F_Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

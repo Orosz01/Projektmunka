@@ -1,7 +1,9 @@
 <?php
 session_start();
-
+require 'includes/db.inc.php';
+require 'modell/user.php';
 require 'includes/header.inc.php';
+$tanulo = new User;
 
 $page="fooldal";
 
