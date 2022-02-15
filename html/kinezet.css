@@ -37,6 +37,10 @@
     color:rgba(255, 0, 0, 0.801);
 }
 
+#oldalsav{
+    font-family:'Supermercado One' ;
+}
+
 .area{
     border-radius: 15px;
 }

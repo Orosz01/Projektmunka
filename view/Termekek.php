@@ -6,7 +6,7 @@
         <a href="K">Kártyák</a>
         <a href="E">Egyéb termékek</a>
       </div>
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Termékek</span>
+      <span style="font-size:30px;cursor:pointer" id="oldalsav" onclick="openNav()">&#9776; Termékek</span>
       <?php 
         if (isset($_REQUEST['action'])){
           if($_REQUEST['action']=="Penzem"){
