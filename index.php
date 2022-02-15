@@ -35,4 +35,5 @@ include 'includes/menu.inc.php';
 include 'controller/'.$page.'.php';
 
 ?>
+
 </body>

@@ -17,15 +17,24 @@
 }
 
 .Regi{
-    color:orange ;
+    color:rgb(241, 141, 25) ;
     font-family:'Supermercado One' ;
     font-size: 25px;
     text-align: center;
     margin-top: 150px;
 }
 
-.ari{
+#fel{
+    color:rgb(75, 9, 255);
+    text-align: center;
+    margin-top: 150px;
+    font-family:'Supermercado One' ;
+    font-size: 25px;
+}
+
+#uplo{
     border-radius: 15px;
+    color:rgba(255, 0, 0, 0.801);
 }
 
 .area{
