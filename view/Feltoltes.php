@@ -13,20 +13,20 @@
         <label for="Tazok">Tazók</label>
         <input type="radio" id="" name="Kat" value="Egyeb dolgok">
         <label for="Egyeb Dolgok">Egyéb Dolgok</label><br>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-        <label for="Egyeb Dolgok">Pengő</label>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-        <label for="Egyeb Dolgok">Érme</label><br>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-        <label for="Egyeb Dolgok">Yu-Gi-Oh</label>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-        <label for="Egyeb Dolgok">Kungfu Panda</label>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-        <label for="Egyeb Dolgok">Focis</label><br>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-        <label for="Egyeb Dolgok">Angry Birds</label>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-        <label for="Egyeb Dolgok">Pokemon</label><br>
+        <input type="radio" id="" name="Kat" value="Pengo">
+        <label for="Pengo">Pengő</label>
+        <input type="radio" id="" name="Kat" value="Erem">
+        <label for="Erme">Érme</label><br>
+        <input type="radio" id="" name="Kat" value="Yu-Gi-Oh">
+        <label for="Yu-Gi-Oh">Yu-Gi-Oh</label>
+        <input type="radio" id="" name="Kat" value="Kungfu Panda">
+        <label for="Kungfu Panda">Kungfu Panda</label>
+        <input type="radio" id="" name="Kat" value="Focis">
+        <label for="Focis">Focis</label><br>
+        <input type="radio" id="" name="Kat" value="Angry Birds">
+        <label for="Angry Birds">Angry Birds</label>
+        <input type="radio" id="" name="Kat" value="Pokemon">
+        <label for="Pokemon">Pokemon</label><br>
 
             Válaszd ki a feltöltendő termék képét:<br>
             <input type="file" name = "fileToUpload[]" id = "fileToUpload" id="uplo"><br>
