@@ -3,6 +3,7 @@
 include 'includes/db.inc.php';
 $loginerorr="";
 $loginerrorr="";
+$loginError="";
 if(isset($_POST['username']) and isset($_POST['pasword']) and isset($_POST['email'])){
 
     $un = mysqli_query($conn, "SELECT * FROM felhasznalok WHERE username = '".$_POST['username']."'");
@@ -12,6 +13,9 @@ if(isset($_POST['username']) and isset($_POST['pasword']) and isset($_POST['emai
        $loginerorr=('Ez a felhasználónév már foglalt');
     }elseif(mysqli_num_rows($em)){
     $loginerrorr=('Ezzel az email címmel már regisztrálva van');
+    }elseif($_POST['password']!=$_POST['password_again']){
+        $loginError .= "Nem egyeznek a jelszavak<br>";
+
     }else{
 
 $sql ="INSERT INTO felhasznalok(username, pasword, email)

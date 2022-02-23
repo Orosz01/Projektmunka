@@ -3,7 +3,9 @@
         <?php
         echo $loginerrorr;
         echo $loginerorr;
+        echo $loginError;
         ?>
+        <span id = "message" > </span>
         <br>
         <br>
         <label for="username">Felhasználó név:</label><br>
@@ -15,5 +17,12 @@
         <label for="email">Email:</label><br>
         <input type="email" class="area" id="email" name="email"><br><br>
         <input type="submit" id="sub" value="Regisztrál"> 
+        <script>
+            document.getElementById('password_again').oninput=document.getElementById('password').oninput=function (){
+                if( document.getElementById('password').value != document.getElementById('password_again').value ){
+                    document.getElementById('message').innerHTML="A jelszók nem egyeznek!<br>";
+                }else document.getElementById('message').innerHTML="";
+            }
+		</script>
     </form>
 </body>
