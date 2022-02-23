@@ -1,5 +1,11 @@
 <body class="Re">
-<form class="Regi" action="index.php?page=reg" method="post" value="reg">
+    <form class="Regi" action="index.php?page=reg" method="post" value="reg">
+        <?php
+        echo $loginerrorr;
+        echo $loginerorr;
+        ?>
+        <br>
+        <br>
         <label for="username">Felhasználó név:</label><br>
         <input type="text" class="area" id="username" name="username"><br>
         <label for="password">Jelszó:</label><br>
