@@ -13,19 +13,19 @@
         <label for="Tazok">Tazók</label>
         <input type="radio" id="" name="Kat" value="Egyeb dolgok">
         <label for="Egyeb Dolgok">Egyéb Dolgok</label><br>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
+        <input type="radio" id="" name="Kat" value="Pengő">
         <label for="Egyeb Dolgok">Pengő</label>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
+        <input type="radio" id="" name="Kat" value="Erem">
           <label for="Egyeb Dolgok">Érme</label><br>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
+        <input type="radio" id="" name="Kat" value="Yu-Gi-Oh">
           <label for="Egyeb Dolgok">Yu-Gi-Oh</label>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
+        <input type="radio" id="" name="Kat" value="Kungfu Panda">
           <label for="Egyeb Dolgok">Kungfu Panda</label>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
+        <input type="radio" id="" name="Kat" value="Focis">
           <label for="Egyeb Dolgok">Focis</label><br>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
+        <input type="radio" id="" name="Kat" value="Angry Birds">
           <label for="Egyeb Dolgok">Angry Birds</label>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
+        <input type="radio" id="" name="Kat" value="Pokemon">
           <label for="Egyeb Dolgok">Pokemon</label><br>
 
             Válaszd ki a feltöltendő termék képét:<br>
