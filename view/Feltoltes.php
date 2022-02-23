@@ -16,17 +16,17 @@
         <input type="radio" id="" name="Kat" value="Egyeb dolgok">
         <label for="Egyeb Dolgok">Pengő</label>
         <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-          <label for="Egyeb Dolgok">Érme</label><br>
+        <label for="Egyeb Dolgok">Érme</label><br>
         <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-          <label for="Egyeb Dolgok">Yu-Gi-Oh</label>
+        <label for="Egyeb Dolgok">Yu-Gi-Oh</label>
         <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-          <label for="Egyeb Dolgok">Kungfu Panda</label>
+        <label for="Egyeb Dolgok">Kungfu Panda</label>
         <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-          <label for="Egyeb Dolgok">Focis</label><br>
+        <label for="Egyeb Dolgok">Focis</label><br>
         <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-          <label for="Egyeb Dolgok">Angry Birds</label>
+        <label for="Egyeb Dolgok">Angry Birds</label>
         <input type="radio" id="" name="Kat" value="Egyeb dolgok">
-          <label for="Egyeb Dolgok">Pokemon</label><br>
+        <label for="Egyeb Dolgok">Pokemon</label><br>
 
             Válaszd ki a feltöltendő termék képét:<br>
             <input type="file" name = "fileToUpload[]" id = "fileToUpload" id="uplo"><br>
