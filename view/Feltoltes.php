@@ -30,7 +30,7 @@
 
             Válaszd ki a feltöltendő termék képét:<br>
             <input type="file" name = "fileToUpload[]" id = "fileToUpload" id="uplo"><br>
-            <div class="upi"><input type ="submit" value ="Kép feltöltése" name="submit" id="uplo"><br></div>
+            <div class="upi"><input type ="submit" value ="Termék feltöltése" name="submit" id="uplo"><br></div>
         <?php
             if($i > 0) echo " A termék feltöltve<br>";
             if($errors){
