@@ -3,7 +3,7 @@
         <?php
         echo $loginerrorr;
         echo $loginerorr;
-        echo $loginError;
+        echo $loginEror;
         ?>
         <span id = "message" > </span>
         <br>
@@ -20,7 +20,7 @@
         <script>
             document.getElementById('password_again').oninput=document.getElementById('password').oninput=function (){
                 if( document.getElementById('password').value != document.getElementById('password_again').value ){
-                    document.getElementById('message').innerHTML="A jelszók nem egyeznek!<br>";
+                    document.getElementById('message').innerHTML="A jelszók nem egyeznek!";
                 }else document.getElementById('message').innerHTML="";
             }
 		</script>
