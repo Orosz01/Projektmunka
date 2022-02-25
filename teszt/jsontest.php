@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 for ($i=0; $i < 5; $i++) { 
     $json=file_get_contents('https://randomuser.me/api');
     $arr = json_decode($json,true);
@@ -11,6 +8,5 @@ for ($i=0; $i < 5; $i++) {
 echo "<br>Location: ".$arr["results"][0]["location"]['city']."";
 echo "<br>Age: ".$arr["results"][0]['dob']['age']."<br>";
 }
-
 
 ?>
