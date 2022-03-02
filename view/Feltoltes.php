@@ -6,19 +6,19 @@
         <input type="text" class="area"  name="Ar"><br>
         <p>Válaszd ki a terméked kategóriáját</p>
 
-        <input type="radio" id="Penznem" name="Kat" value="Penznem">
+        <input type="radio" id="Penznem" name="Kat" value="penznem">
         <label for="Penznem">Pénznemek</label>
-        <input type="radio" id="Kartya" name="Kat" value="Kartya">
+        <input type="radio" id="Kartya" name="Kat" value="kartyak">
         <label for="Kartya">Kártyák</label>
-        <input type="radio" id="Tazok" name="Kat" value="Tazok">
+        <input type="radio" id="Tazok" name="Kat" value="tazok">
         <label for="Tazok">Tazók</label>
-        <input type="radio" id="" name="Kat" value="Egyeb dolgok">
+        <input type="radio" id="Egyedb_termekek" name="Kat" value="egyeb_termekek">
         <label for="Egyeb Dolgok">Egyéb Dolgok</label><br>
 
         <div class="hide1">
         <input type="radio" id="money" name="Al_Kat" value="Pengo">
         <label for="Pengo">Pengő</label>
-        <input type="radio" id="money" name="Al_Kat" value="Erem">
+        <input type="radio" id="money" name="Al_Kat" value="Ermek">
         <label for="Erme">Érme</label><br>
         </div>
         <div  class="hide2">
