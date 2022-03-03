@@ -1,10 +1,12 @@
 <body class="Fe">
     
-        <form action="index.php?page=feltoltes" method="post"  id="fel">
+        <form action="index.php?page=feltoltes" method="post" enctype="multipart/form-data" id="fel">
             <?php
              echo $kep ;
              echo $kat ;
              echo $alkat ;
+             echo $nev ; 
+             echo $ar ;
             ?>
             <br>
             <br>
@@ -20,7 +22,7 @@
         <label for="Kartya">Kártyák</label>
         <input type="radio" id="Tazok" name="Kat" value="tazok">
         <label for="Tazok">Tazók</label>
-        <input type="radio" id="Egyedb_termekek" name="Kat" value="egyeb_termekek">
+        <input type="radio" id="Egyeb_termekek" name="Kat" value="egyeb_termekek">
         <label for="Egyeb Dolgok">Egyéb Dolgok</label><br>
 
         <div class="hide1">
@@ -44,7 +46,7 @@
         <label for="Pokemon">Pokemon</label><br>
         </div>
             Válaszd ki a feltöltendő termék képét:<br>
-            <input type="file" name = "fileToUpload" id = "fileToUpload" id="uplo"><br>
+            <input type="file" name = "fileToUpload[]" id = "fileToUpload" id="uplo"><br>
             <div class="upi"><input type ="submit" value ="Termék feltöltése" name="submit" id="uplo"><br></div>
         </form>
 </body>
