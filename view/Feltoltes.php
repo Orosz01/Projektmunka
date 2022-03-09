@@ -23,7 +23,7 @@
         <input type="radio" id="Tazok" name="Kat" value="tazok">
         <label for="Tazok">Tazók</label>
         <input type="radio" id="Egyeb_termekek" name="Kat" value="egyeb_termekek">
-        <label for="Egyeb Dolgok">Egyéb Dolgok</label><br>
+        <label for="Egyeb Termekek">Egyéb Termekek</label><br>
 
         <div class="hide1">
         <input type="radio" id="money" name="Al_Kat" value="Pengo">

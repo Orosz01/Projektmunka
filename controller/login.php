@@ -1,5 +1,7 @@
 <?php
-
+if(isset($_SESSION['F_Id'])){
+  header("Location:index.php?page=fooldal");
+  }
 if(isset($_POST['username']) and isset($_POST['pasword'])){
   $loginError='';
   if(strlen($_POST['username']) == 0)$loginError .="Nem írtál be felhsználónevet<br>";

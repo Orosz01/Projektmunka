@@ -1,5 +1,7 @@
 <?php
-
+if(isset($_SESSION['F_Id'])){
+    header("Location:index.php?page=fooldal");
+    }
 include 'includes/db.inc.php';
 $loginerorr="";
 $loginerrorr="";

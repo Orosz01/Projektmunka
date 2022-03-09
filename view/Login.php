@@ -2,7 +2,7 @@
     <form class="Be" actio="index.php?page=login" method="post">
         <?php
         if(isset($loginError) and $loginError!="")
-        echo $loginError . "<br>";
+        echo $loginError . "<br> <br>";
         ?>
         <label for="username">Felhasználó név:</label><br>
         <input type="text" class="area" id="username" name="username"><br>
