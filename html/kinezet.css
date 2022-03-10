@@ -1,3 +1,7 @@
+body{
+    margin-top: 4.6rem !important;
+}
+
 .Fo{ background-color: rgb(235, 207, 51);
 }
 .Te{ background-color: rgb(233, 174, 49);
@@ -6,17 +10,49 @@
 }
 .Re{ background-color: rgb(46, 18, 201);
 }
-.Fe{ background-color: rgb(16, 224, 9);
+.Fe{ background-color: rgb(39, 219, 33);
 }
+
 
 .kepek{
-    max-width: 20rem;
-    max-height: 15rem;
+    width: 20rem;
+    height: 15rem;
+    display: block;
+    margin: auto;
 }
 
+.kozep{
+    text-align: center !important;
+}
+
+.keret{
+    display: inline;
+    margin:1%;
+    min-width: 30%;
+    margin: auto;
+    float:initial;
+    margin-bottom:1%;
+    font-family:'Sansita Swashed' ;
+}
+
+.gombok{
+    color:yellow     !important;
+}
+
+.luk{
+    margin-top: 0.5%;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width:80%;
+    float: right;
+}
 .Be{
     color:rgb(30, 255, 0);
-    font-family:'Supermercado One' ;
+    font-family:'Sansita Swashed' ;
     font-size: 25px;
     text-align: center;
     margin-top: 150px;
@@ -24,7 +60,7 @@
 
 .Regi{
     color:rgb(241, 141, 25) ;
-    font-family:'Supermercado One' ;
+    font-family:'Sansita Swashed' ;
     font-size: 25px;
     text-align: center;
     margin-top: 150px;
@@ -34,7 +70,7 @@
     color:rgb(75, 9, 255);
     text-align: center;
     margin-top: 150px;
-    font-family:'Supermercado One' ;
+    font-family:'Sansita Swashed' ;
     font-size: 25px;
 }
 
@@ -48,7 +84,7 @@
 }
 
 #oldalsav{
-    font-family:'Supermercado One' ;
+    font-family:'Sansita Swashed' ;
 }
 
 .area{
@@ -70,7 +106,10 @@
 }
 
 #ki{
-    padding-left: 48em !important;
+   
+    position: relative;
+    bottom: 0px;
+    right:0px;
     }
 
 .topnav{background-color: rgb(223, 19, 19);
@@ -80,11 +119,17 @@
     margin:0px;
     word-spacing: 25px;
     text-indent: 5px;
-
+    height: 4.6rem;
+}
+.sticky{
+    position: fixed !important;
+    top: 0 !important;
+    width: 100%;
+    
 }
 .topnav a{text-decoration:none;
     color:black;
-    font-family: 'Supermercado One';
+    font-family: 'Sansita Swashed';
     
 }
 
@@ -108,12 +153,15 @@
     color: rgb(0, 0, 0);
     display: block;
     transition: 0.3s;
-    font-family: 'Supermercado One';
+    font-family: 'Sansita Swashed';
 }
-  
+  .navbar-nav{
+    position: absolute;
+  }
   
   .sidenav a:hover {
-    color:red;
+    color:rgb(255, 0, 0);
+    
   }
   
   .sidenav .closebtn {
@@ -123,3 +171,4 @@
     font-size: 36px;
     margin-left: 50px;
   }
+

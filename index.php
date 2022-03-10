@@ -43,8 +43,8 @@ $title = $menupontok[$page];
 <body>
 <?php
 
-include 'includes/menu.inc.php';
 include 'controller/'.$page.'.php';
+include 'includes/menu.inc.php';
 
 ?>
 

@@ -16,34 +16,37 @@
         <input type="text" class="area"  name="Ar"><br>
         <p>Válaszd ki a terméked kategóriáját</p>
 
-        <input type="radio" id="Penznem" name="Kat" value="penznem">
-        <label for="Penznem">Pénznemek</label>
-        <input type="radio" id="Kartya" name="Kat" value="kartyak">
-        <label for="Kartya">Kártyák</label>
-        <input type="radio" id="Tazok" name="Kat" value="tazok">
-        <label for="Tazok">Tazók</label>
-        <input type="radio" id="Egyeb_termekek" name="Kat" value="egyeb_termekek">
-        <label for="Egyeb Termekek">Egyéb Termekek</label><br>
+        <input type="radio"  id="Penznem" name="Kat" value="penznem">
+        <label for="Penznem" class="gombok">Pénznemek</label>
+        <input type="radio"  id="Kartya" name="Kat" value="kartyak">
+        <label for="Kartya" class="gombok">Kártyák</label>
+        <input type="radio"  id="Tazok" name="Kat" value="tazok">
+        <label for="Tazok" class="gombok">Tazók</label>
+        <input type="radio"  id="Egyeb_termekek" name="Kat" value="egyeb_termekek">
+        <label for="Egyeb Termekek" class="gombok">Egyéb Termekek</label><br>
 
         <div class="hide1">
-        <input type="radio" id="money" name="Al_Kat" value="Pengo">
-        <label for="Pengo">Pengő</label>
-        <input type="radio" id="money" name="Al_Kat" value="Ermek">
-        <label for="Erme">Érme</label><br>
+        <p class="luk">Válaszd ki a terméked al-kategóriáját</p>
+        <input type="radio"  id="money" name="Al_Kat" value="Pengo">
+        <label for="Pengo" class="gombok">Pengő</label>
+        <input type="radio"  id="money" name="Al_Kat" value="Ermek">
+        <label for="Erme" class="gombok">Érme</label><br>
         </div>
         <div  class="hide2">
-        <input type="radio" id="Kartyak" name="Al_Kat" value="Yu-Gi-Oh">
-        <label for="Yu-Gi-Oh">Yu-Gi-Oh</label>
-        <input type="radio" id="Kartyak" name="Al_Kat" value="Kungfu Panda">
-        <label for="Kungfu Panda">Kungfu Panda</label>
-        <input type="radio" id="Kartyak" name="Al_Kat" value="Focis">
-        <label for="Focis">Focis</label><br>
+        <p class="luk">Válaszd ki a terméked al-kategóriáját</p>
+        <input type="radio"  id="Kartyak" name="Al_Kat" value="Yu-Gi-Oh">
+        <label for="Yu-Gi-Oh" class="gombok">Yu-Gi-Oh</label>
+        <input type="radio"  id="Kartyak" name="Al_Kat" value="Kungfu Panda">
+        <label for="Kungfu Panda" class="gombok">Kungfu Panda</label>
+        <input type="radio"  id="Kartyak" name="Al_Kat" value="Focis">
+        <label for="Focis" class="gombok">Focis</label><br>
         </div>
         <div  class="hide3">
-        <input type="radio" id="taz" name="Al_Kat" value="Angry Birds">
-        <label for="Angry Birds">Angry Birds</label>
-        <input type="radio" id="taz" name="Al_Kat" value="Pokemon">
-        <label for="Pokemon">Pokemon</label><br>
+        <p class="luk">Válaszd ki a terméked al-kategóriáját</p>
+        <input type="radio"  id="taz" name="Al_Kat" value="Angry Birds">
+        <label for="Angry Birds" class="gombok">Angry Birds</label>
+        <input type="radio"  id="taz" name="Al_Kat" value="Pokemon">
+        <label for="Pokemon" class="gombok">Pokemon</label><br>
         </div>
             Válaszd ki a feltöltendő termék képét:<br>
             <input type="file" name = "fileToUpload[]" id = "fileToUpload" id="uplo"><br>

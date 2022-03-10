@@ -8,13 +8,15 @@
       </div>
       <div style="font-size:30px;cursor:pointer" id="oldalsav" onclick="openNav()">&#9776; Termékek</div>
       <?php 
+       echo"<div class='flex-container'>";
+
         if (isset($_REQUEST['action'])){
         if($_REQUEST['action']=="Penznem"){
           if ($penzid) {
             foreach($penzid as $penzek) {
                 $penz->set_penz($penzek,$conn);
                 
-                        echo '<div class="keret"><div>'.$penz->get_Termek_nev().'</div><div><img class="kepek" src="'.$penz->get_kep().'"><div>'.$penz->get_Ar().'</div><div>'.$penz->get_username().'</div></div></div>';
+                        echo '<span class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kepek" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().'</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div></span>';
               
             }
           }
@@ -28,7 +30,7 @@
                 $tazo->set_tazo($tazok,$conn);
                
                    
-                        echo '<div class="keret"><div>'.$tazo->get_Termek_nev().'</div><div><img class="kepek" src="'.$tazo->get_kep().'"><div>'.$tazo->get_Ar().'</div><div>'.$tazo->get_username().'</div></div></div>';
+                        echo '<span class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kepek" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().'</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div></span>';
                 
             
             }
@@ -44,7 +46,7 @@
                 $kartya->set_kartya($kartyak,$conn);
                 
                    
-                        echo '<div class="keret"><div>'.$kartya->get_Termek_nev().'</div><div><img class="kepek" src="'.$kartya->get_kep().'"><div>'.$kartya->get_Ar().'</div><div>'.$kartya->get_username().'</div></div></div>';
+                        echo '<span class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kepek" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div></span>';
                
             }
           }
@@ -58,13 +60,14 @@
                 $egyeb->set_egyeb($egyebek,$conn);
                
                    
-                        echo '<div class="keret"><div>'.$egyeb->get_Termek_nev().'</div><div><img class="kepek" src="'.$egyeb->get_kep().'"><div>'.$egyeb->get_Ar().'</div><div>'.$egyeb->get_username().'</div></div></div>';
+                        echo '<span class="keret"><div>Terméknév: <br> '.$egyeb->get_Termek_nev().'</div><div class="kozep"><img class="kepek" src="'.$egyeb->get_kep().'"></div><div>Termék ára: <br>'.$egyeb->get_Ar().'</div><div>Tulajdonos neve:<br> '.$egyeb->get_username().'</div></span>';
                
             }
           
          }
         }
         }
+        echo"</div>";
       ?>
       <?php 
           if(!isset($_REQUEST['action'])){
@@ -72,22 +75,22 @@
 
           foreach($penzid as $penzek) {
             $penz->set_penz($penzek,$conn);
-                    echo '<div class="keret"><div>'.$penz->get_Termek_nev().'</div><div><img class="kepek" src="'.$penz->get_kep().'"><div>'.$penz->get_Ar().'</div><div>'.$penz->get_username().'</div></div></div>';
+                    echo '<span class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kepek" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>'.$penz->get_Ar().'</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div></span>';
           }
 
           foreach($tazoid as $tazok) {
             $tazo->set_tazo($tazok,$conn);
-                    echo '<div class="keret"><div>'.$tazo->get_Termek_nev().'</div><div><img class="kepek" src="'.$tazo->get_kep().'"><div>'.$tazo->get_Ar().'</div><div>'.$tazo->get_username().'</div></div></div>';
+                    echo '<span class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kepek" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().'</div><div>Tulajdonos neve:<br> '.$tazo->get_username().'</div></span>';
           }
           foreach($kartyaid as $kartyak) {
 
             $kartya->set_kartya($kartyak,$conn);
-                    echo '<div class="keret"><div>'.$kartya->get_Termek_nev().'</div><div><img class="kepek" src="'.$kartya->get_kep().'"><div>'.$kartya->get_Ar().'</div><div>'.$kartya->get_username().'</div></div></div>';
+                    echo '<span class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kepek" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br>'.$kartya->get_username().'</div></span>';
           }
           foreach($egyebid as $egyebek) {
 
             $egyeb->set_egyeb($egyebek,$conn);
-                    echo '<div class="keret"><div>'.$egyeb->get_Termek_nev().'</div><div><img class="kepek" src="'.$egyeb->get_kep().'"><div>'.$egyeb->get_Ar().'</div><div>'.$egyeb->get_username().'</div></div></div>';
+                    echo '<span class="keret"><div>Terméknév:<br> '.$egyeb->get_Termek_nev().'</div><div class="kozep"><img class="kepek" src="'.$egyeb->get_kep().'"></div><div>Termék ára: <br>'.$egyeb->get_Ar().'</div><div>Tulajdonos neve:<br> '.$egyeb->get_username().'</div></span>';
           }
 
           echo"</div>";
@@ -95,7 +98,7 @@
 ?>
       <script>
         function openNav() {
-          document.getElementById("mySidenav").style.width = "200px";
+          document.getElementById("mySidenav").style.width = "160px";
         }
 
         function closeNav() {
