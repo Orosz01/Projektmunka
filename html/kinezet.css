@@ -4,7 +4,7 @@ body{
 
 .Fo{ background-color: rgb(235, 207, 51);
 }
-.Te{ background-color: rgb(233, 174, 49);
+.Te{ background-color: rgb(206, 149, 27);
 }
 .Lo{ background-color: rgb(46, 18, 201);
 }
@@ -14,9 +14,9 @@ body{
 }
 
 
-.kepek{
-    width: 20rem;
-    height: 15rem;
+.kep{
+    max-width: 20rem;
+    max-height: 10rem;
     display: block;
     margin: auto;
 }
@@ -28,15 +28,17 @@ body{
 .keret{
     display: inline;
     margin:1%;
-    min-width: 30%;
+    min-width: 32%;
     margin: auto;
     float:initial;
-    margin-bottom:1%;
+    margin-bottom: 3%;
     font-family:'Sansita Swashed' ;
+    max-height: 27rem;
+    border: rgb(34, 180, 34) 5px inset;
 }
 
 .gombok{
-    color:yellow     !important;
+    color:yellow  !important;
 }
 
 .luk{
@@ -55,7 +57,7 @@ body{
     font-family:'Sansita Swashed' ;
     font-size: 25px;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 15rem;
 }
 
 .Regi{
@@ -63,15 +65,21 @@ body{
     font-family:'Sansita Swashed' ;
     font-size: 25px;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 10rem;
 }
 
 #fel{
     color:rgb(75, 9, 255);
     text-align: center;
-    margin-top: 150px;
+    margin-top: 10rem;
     font-family:'Sansita Swashed' ;
     font-size: 25px;
+}
+#uzlet{
+    border-radius: 10px;
+    color:rgba(0, 0, 0, 0.89);
+    margin: 5px;
+    background-color: aqua;
 }
 
 #uplo{
@@ -85,6 +93,7 @@ body{
 
 #oldalsav{
     font-family:'Sansita Swashed' ;
+    width:11%;
 }
 
 .area{
@@ -112,13 +121,12 @@ body{
     right:0px;
     }
 
-.topnav{background-color: rgb(223, 19, 19);
+.topnav{background-color: rgb(255, 0, 0);
     color:black;
-    padding: 10px;
     font-size:27px;
     margin:0px;
     word-spacing: 25px;
-    text-indent: 5px;
+    text-indent: 1rem;
     height: 4.6rem;
 }
 .sticky{
@@ -172,3 +180,6 @@ body{
     margin-left: 50px;
   }
 
+  .nav-link{
+      background-color: rgb(255, 0, 0);
+  }
