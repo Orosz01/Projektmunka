@@ -1,15 +1,16 @@
 <?php
-
-
+if(isset($_POST['uzi'])){
 // the message
-$msg = "First line of text\nSecond line of text";
+$msg = $_SESSION['username']. " Szeretne üzletet kötni önnel a/az ".$_SESSION['Termek_nev']."-el kapcsolatban ";
 
 // use wordwrap() if lines are longer than 70 characters
 $msg = wordwrap($msg,70);
 
-// send email
-mail( "" ,"Csere / Üzleti ajánlat",$msg);
+$header = "From: ".$_SESSION['email'];
 
+// send email
+mail( "detari.klaudia.2017ice@bankitatabanya.hu" ,"Csere / Üzleti ajánlat",$msg,$header);
+}
 
 $egyebid=$egyeb->egyeble($conn);
 $kartyaid=$kartya->kartyale($conn);
