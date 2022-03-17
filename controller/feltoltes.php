@@ -53,7 +53,7 @@ if(isset($_POST['submit'])){
             VALUES ((select T_id from Termekek where main_kat like '".$_POST['Kat']."'),' ".$_POST['Termek_nev']."', ".$_SESSION['F_Id'].",".$_POST['Ar'].",(select id from ".$asd." where nev like '".$_POST['Al_Kat']."'),'" .$target_file."')";
         
             if ($conn->query($sql) === TRUE) {
-              header("location:index.php");
+              header("location:index.php?page=termekek");
             }else{
               echo "Error: " . $sql . "<br>" . $conn->error;
             } 
@@ -88,7 +88,7 @@ if(isset($_POST['submit'])){
       VALUES ((select T_id from Termekek where main_kat like '".$_POST['Kat']."'),' ".$_POST['Termek_nev']."', ".$_SESSION['F_Id'].",".$_POST['Ar'].",'". $target_file."')";
 
       if ($conn->query($sql) === TRUE) {
-          header("location:index.php");
+          header("location:index.php?page=termekek");
                   }else {
         echo "Error: " . $sql . "<br>" . $conn->error;
                   }

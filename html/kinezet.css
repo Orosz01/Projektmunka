@@ -22,7 +22,10 @@ body{
 }
 
 .kozep{
+    display:flex;
     text-align: center !important;
+    min-height: 10rem;
+    align-items: center;
 }
 
 .keret{
@@ -34,6 +37,7 @@ body{
     margin-bottom: 3%;
     font-family:'Sansita Swashed' ;
     max-height: 27rem;
+    min-height: 23rem !important;
     border: rgb(34, 180, 34) 5px inset;
 }
 

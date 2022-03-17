@@ -15,6 +15,7 @@ if ($result->num_rows > 0) {
    if(md5($_POST['pasword'])==$tanulo->get_pasword()){
      $_SESSION['F_Id']=$row['F_Id'];
      $_SESSION['username']=$tanulo->get_username();
+     $_SESSION['email']=$tanulo->get_email();
      header('Location:index.php?page=fooldal');
     exit();
     }
