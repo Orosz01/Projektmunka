@@ -13,8 +13,8 @@ if(isset($_POST['submit'])){
       $i = 0;
       $errors = array();
       if(isset($_FILES['fileToUpload'])){
-        if($_POST['Kat']=='penznem' and $_POST['Al_Kat']=='Pengo'){
-                $target_dir = "Termekek/Penznemek/Pengo/";
+        if($_POST['Kat']=='penznem' and $_POST['Al_Kat']=='Papir'){
+                $target_dir = "Termekek/Penznemek/Papir/";
               }elseif($_POST['Kat']=='penznem' and $_POST['Al_Kat']=='Ermek'){
                 $target_dir = "Termekek/Penznemek/Ermek/";
               }elseif($_POST['Kat']=='kartyak' and $_POST['Al_Kat']=='Focis'){

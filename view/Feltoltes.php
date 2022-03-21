@@ -27,8 +27,8 @@
 
         <div class="hide1">
         <p class="luk">Válaszd ki a terméked al-kategóriáját</p>
-        <input type="radio"  id="money" name="Al_Kat" value="Pengo">
-        <label for="Pengo" class="gombok">Pengő</label>
+        <input type="radio"  id="money" name="Al_Kat" value="Papir">
+        <label for="Pengo" class="gombok">Papír</label>
         <input type="radio"  id="money" name="Al_Kat" value="Ermek">
         <label for="Erme" class="gombok">Érme</label><br>
         </div>
