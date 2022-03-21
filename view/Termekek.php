@@ -23,9 +23,9 @@
             foreach($penzid as $penzek) { 
                 $penz->set_penz($penzek,$conn);
                   if(empty($_SESSION['F_Id'])){ 
-                    echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().'</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div></div>';
+                    echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar(). ' Ft</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div></div>';
                   }else
-                        echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().'</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$penzek.'" name="termekid"><input type="hidden" value="'.$penz->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                        echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$penzek.'" name="termekid"><input type="hidden" value="'.$penz->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
                 }
             }
           }
@@ -37,9 +37,9 @@
                   $penz->set_penz($penzek,$conn);
                   if($penz->get_K_id()==2){
                     if(empty($_SESSION['F_Id'])){
-                      echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().'</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div></div>';
+                      echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div></div>';
                     }else
-                          echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().'</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$penzek.'" name="termekid"><input type="hidden" value="'.$penz->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                          echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$penzek.'" name="termekid"><input type="hidden" value="'.$penz->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
               }
             }
             }
@@ -52,9 +52,9 @@
                     $penz->set_penz($penzek,$conn);
                     if($penz->get_K_id()==1){
                       if(empty($_SESSION['F_Id'])){
-                        echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().'</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div></div>';
+                        echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div></div>';
                       }else
-                            echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().'</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$penzek.'" name="termekid"><input type="hidden" value="'.$penz->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                            echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$penzek.'" name="termekid"><input type="hidden" value="'.$penz->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
                 }
               }
               }
@@ -66,10 +66,10 @@
             foreach($tazoid as $tazok) {
                 $tazo->set_tazo($tazok,$conn);
                 if(empty($_SESSION['F_Id'])){
-                  echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().'</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div></div>';
+                  echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().' Ft</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div></div>';
                 }else
                    
-                        echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().'</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$tazok.'" name="termekid"><input type="hidden" value="'.$tazo->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                        echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().' Ft</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$tazok.'" name="termekid"><input type="hidden" value="'.$tazo->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
             }
           }
         }
@@ -81,10 +81,10 @@
                   $tazo->set_tazo($tazok,$conn);
                   if($tazo->get_K_id()==2){
                   if(empty($_SESSION['F_Id'])){
-                    echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().'</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div></div>';
+                    echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().' Ft</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div></div>';
                   }else
                      
-                          echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().'</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$tazok.'" name="termekid"><input type="hidden" value="'.$tazo->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                          echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().' Ft</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$tazok.'" name="termekid"><input type="hidden" value="'.$tazo->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
               }
             }
           }
@@ -97,10 +97,10 @@
                     $tazo->set_tazo($tazok,$conn);
                     if($tazo->get_K_id()==1){
                     if(empty($_SESSION['F_Id'])){
-                      echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().'</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div></div>';
+                      echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().' Ft</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div></div>';
                     }else
                        
-                            echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().'</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$tazok.'" name="termekid"><input type="hidden" value="'.$tazo->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                            echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().' Ft</div><div>Tulajdonos neve:<br>'.$tazo->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$tazok.'" name="termekid"><input type="hidden" value="'.$tazo->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
                 }
               }
             }
@@ -112,9 +112,9 @@
             foreach($kartyaid as $kartyak) {
                 $kartya->set_kartya($kartyak,$conn);
                 if(empty($_SESSION['F_Id'])){
-                  echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div></div>';
+                  echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div></div>';
                 }else
-                        echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$kartyak.'" name="termekid"><input type="hidden" value="'.$kartya->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                        echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$kartyak.'" name="termekid"><input type="hidden" value="'.$kartya->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
             }
           }
         }
@@ -126,9 +126,9 @@
                   $kartya->set_kartya($kartyak,$conn);
                   if($kartya->get_K_id()==3){
                   if(empty($_SESSION['F_Id'])){
-                    echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div></div>';
+                    echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div></div>';
                   }else
-                          echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$kartyak.'" name="termekid"><input type="hidden" value="'.$kartya->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                          echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$kartyak.'" name="termekid"><input type="hidden" value="'.$kartya->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
               }
             }
           }
@@ -141,9 +141,9 @@
                     $kartya->set_kartya($kartyak,$conn);
                     if($kartya->get_K_id()==1){
                     if(empty($_SESSION['F_Id'])){
-                      echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div></div>';
+                      echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div></div>';
                     }else
-                            echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$kartyak.'" name="termekid"><input type="hidden" value="'.$kartya->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                            echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$kartyak.'" name="termekid"><input type="hidden" value="'.$kartya->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
                 }
               }
             }
@@ -156,9 +156,9 @@
                       $kartya->set_kartya($kartyak,$conn);
                       if($kartya->get_K_id()==2){
                       if(empty($_SESSION['F_Id'])){
-                        echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div></div>';
+                        echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div></div>';
                       }else
-                              echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$kartyak.'" name="termekid"><input type="hidden" value="'.$kartya->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                              echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$kartya->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$kartyak.'" name="termekid"><input type="hidden" value="'.$kartya->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
                   }
                 }
               }
@@ -170,9 +170,9 @@
             foreach($egyebid as $egyebek) {
                 $egyeb->set_egyeb($egyebek,$conn);
                 if(empty($_SESSION['F_Id'])){
-                  echo '<div class="keret"><div>Terméknév: <br> '.$egyeb->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$egyeb->get_kep().'"></div><div>Termék ára: <br>'.$egyeb->get_Ar().'</div><div>Tulajdonos neve:<br> '.$egyeb->get_username().'</div></div>';
+                  echo '<div class="keret"><div>Terméknév: <br> '.$egyeb->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$egyeb->get_kep().'"></div><div>Termék ára: <br>'.$egyeb->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$egyeb->get_username().'</div></div>';
                 }else
-                        echo '<div class="keret"><div>Terméknév: <br> '.$egyeb->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$egyeb->get_kep().'"></div><div>Termék ára: <br>'.$egyeb->get_Ar().'</div><div>Tulajdonos neve:<br> '.$egyeb->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$egyebek.'" name="termekid"><input type="hidden" value="'.$egyeb->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                        echo '<div class="keret"><div>Terméknév: <br> '.$egyeb->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$egyeb->get_kep().'"></div><div>Termék ára: <br>'.$egyeb->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$egyeb->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$egyebek.'" name="termekid"><input type="hidden" value="'.$egyeb->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
             }
          }
         }
@@ -186,33 +186,33 @@
           foreach($penzid as $penzek) {
             $penz->set_penz($penzek,$conn);
             if(empty($_SESSION['F_Id'])){
-              echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().'</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div></div>';
+              echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>  '.$penz->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div></div>';
             }else
-                    echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>'.$penz->get_Ar().'</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$penzek.'" name="termekid"><input type="hidden" value="'.$penz->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                    echo '<div class="keret"><div>Terméknév:<br> '.$penz->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$penz->get_kep().'"></div><div>Termék ára: <br>'.$penz->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$penz->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$penzek.'" name="termekid"><input type="hidden" value="'.$penz->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
           }
 
           foreach($tazoid as $tazok) {
             $tazo->set_tazo($tazok,$conn);
             if(empty($_SESSION['F_Id'])){
-              echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().'</div><div>Tulajdonos neve:<br> '.$tazo->get_username().'</div></div>';
+              echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$tazo->get_username().'</div></div>';
             }else
-                    echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().'</div><div>Tulajdonos neve:<br> '.$tazo->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$tazok.'" name="termekid"><input type="hidden" value="'.$tazo->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                    echo '<div class="keret"><div>Terméknév:<br> '.$tazo->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$tazo->get_kep().'"></div><div>Termék ára:<br> '.$tazo->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$tazo->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$tazok.'" name="termekid"><input type="hidden" value="'.$tazo->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
           }
           foreach($kartyaid as $kartyak) {
 
             $kartya->set_kartya($kartyak,$conn);
             if(empty($_SESSION['F_Id'])){
-              echo  '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br>'.$kartya->get_username().'</div></div>';
+              echo  '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().' Ft</div><div>Tulajdonos neve:<br>'.$kartya->get_username().'</div></div>';
             }else
-                    echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().'</div><div>Tulajdonos neve:<br>'.$kartya->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$kartyak.'" name="termekid"><input type="hidden" value="'.$kartya->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                    echo '<div class="keret"><div>Terméknév:<br> '.$kartya->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$kartya->get_kep().'"></div><div>Termék ára:<br> '.$kartya->get_Ar().' Ft</div><div>Tulajdonos neve:<br>'.$kartya->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$kartyak.'" name="termekid"><input type="hidden" value="'.$kartya->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
           }
           foreach($egyebid as $egyebek) {
 
             $egyeb->set_egyeb($egyebek,$conn);
             if(empty($_SESSION['F_Id'])){
-              echo '<div class="keret"><div>Terméknév:<br> '.$egyeb->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$egyeb->get_kep().'"></div><div>Termék ára: <br>'.$egyeb->get_Ar().'</div><div>Tulajdonos neve:<br> '.$egyeb->get_username().'</div></div>';
+              echo '<div class="keret"><div>Terméknév:<br> '.$egyeb->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$egyeb->get_kep().'"></div><div>Termék ára: <br>'.$egyeb->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$egyeb->get_username().'</div></div>';
             }else
-                    echo '<div class="keret"><div>Terméknév:<br> '.$egyeb->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$egyeb->get_kep().'"></div><div>Termék ára: <br>'.$egyeb->get_Ar().'</div><div>Tulajdonos neve:<br> '.$egyeb->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$egyebek.'" name="termekid"><input type="hidden" value="'.$egyeb->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
+                    echo '<div class="keret"><div>Terméknév:<br> '.$egyeb->get_Termek_nev().'</div><div class="kozep"><img class="kep" src="'.$egyeb->get_kep().'"></div><div>Termék ára: <br>'.$egyeb->get_Ar().' Ft</div><div>Tulajdonos neve:<br> '.$egyeb->get_username().'</div><div><form action="index.php?page=termekek" method="post"><input type="submit" id="uzlet" name="uzi" value="Üzleti ajánlat tétel"><input type="hidden" value="'.$egyebek.'" name="termekid"><input type="hidden" value="'.$egyeb->get_Termek_azonosito().'" name="mainkat"></form></div></div>';
           }
 
           echo"</div>";
