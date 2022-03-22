@@ -47,15 +47,15 @@ if ($result->num_rows > 0) {
     $ro=$key;
 }
 // the message
-$msg = $_SESSION['username']. " Szeretne üzletet kötni önnel a/az ".$ro." termékkel kapcsolatban <br> <a href='http://banki13.komarom.net/zsolt/szakdolgozat/index.php'";
-
+$msg = $_SESSION['username']. " Szeretne üzletet kötni önnel a/az ".$ro." termékkel kapcsolatban <br> <a href='http://banki13.komarom.net/zsolt/szakdolgozat/index.php'>Az oldalra</a>";
+$header = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 // use wordwrap() if lines are longer than 70 characters
 $msg = wordwrap($msg,70);
 
-$header = "From: ".$_SESSION['email'];
+$header .= "From: ".$_SESSION['email'];
 
 // send email
-mail( "$ra" ,"Csere / Üzleti ajánlat",$msg,$header);
+mail( $ra ,"Csere / Üzleti ajánlat",$msg,$header);
 
 }
 
