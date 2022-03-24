@@ -32,6 +32,12 @@ if(isset($_POST['delete'])){
     }
 }
 
+    if(isset($_POST['edit'])){
+        $sql="UPDATE felhasznalok SET email='".$_POST['reemail']."' where F_Id =".$_SESSION['F_Id'];
+        $conn->query($sql);
+        $_SESSION['email']=$_POST['reemail'];
+        header("location:index.php?page=prof");
+    }
 
 $egyebid=$egyeb->egyeble($conn);
 $kartyaid=$kartya->kartyale($conn);

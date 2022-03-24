@@ -1,11 +1,23 @@
 <body class="Pro">
-    <form class="Prof" actio="index.php?page=profil" method="post">
+    <form class="Prof" action="index.php?page=prof" method="post">
         <?php    
-    echo $_SESSION['username'];
+            echo $_SESSION['username'] ."<br>";
+          if(isset($_REQUEST['editEmail'])){
+              ?>
+
+        <input type="email" id="edi" name="reemail"  value="<?php echo $_SESSION['email'];?>">
+
+        <input type="submit" id="edigo" name="edit" value="Szerkeszt">
+
+        <?php
+        }else{
+            echo $_SESSION['email']." <a href='?".$_SERVER["QUERY_STRING"]."&editEmail=true'> Edit </a>";
+        }
         ?>
     </form>
-    <?php
-    echo"<div class='flex-container'>";
+        <?php
+        
+            echo"<div class='flex-container'>";
             if ($penzid) {
               foreach($penzid as $penzek) {
                   $penz->set_penz($penzek,$conn);
