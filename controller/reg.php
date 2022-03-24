@@ -1,4 +1,5 @@
 <?php
+$hosszu="";
 if(isset($_SESSION['F_Id'])){
     header("Location:index.php?page=fooldal");
     }
@@ -7,7 +8,8 @@ $loginerorr="";
 $loginerrorr="";
 $loginEror=""; 
 if(isset($_POST['username']) and isset($_POST['pasword']) and isset($_POST['pasword_again']) and isset($_POST['email'])){
-
+    if($_POST['username']>30){
+    }$hosszu="A megadott felhasználónév túl hosszú";
     $un = mysqli_query($conn, "SELECT * FROM felhasznalok WHERE username = '".$_POST['username']."'");
     $em = mysqli_query($conn, "SELECT * FROM felhasznalok WHERE email = '".$_POST['email']."'");
 

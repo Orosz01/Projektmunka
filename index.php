@@ -31,6 +31,7 @@ if(!empty($_SESSION["F_Id"])){
 $menupontok = array('fooldal' => "Főoldal",
                     'termekek' => "Termékek",
                     'feltoltes' => "Feltöltés",
+                    'prof' => "Profil",
                     'logout' => "Kijelentkezés");
 }else
 $menupontok = array('fooldal' => "Főoldal",

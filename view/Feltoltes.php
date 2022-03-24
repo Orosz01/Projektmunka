@@ -7,13 +7,14 @@
              echo $alkat ;
              echo $nev ; 
              echo $ar ;
+             echo $nemaz;
             ?>
             <br>
             <br>
         <label for="termeknev">Termék neve:</label><br>
         <input type="text" class="area"  name="Termek_nev"><br>
         <label for="termeknev">Esetleges eladási ár:</label><br>
-        <input type="text" class="area"  name="Ar"><br>
+        <input type="number" class="area"  name="Ar"><br>
         <p>Válaszd ki a terméked kategóriáját</p>
 
         <input type="radio"  id="Penznem" name="Kat" value="penznem">

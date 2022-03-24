@@ -11,6 +11,9 @@ body{
 }
 .Fe{ background-color: rgb(39, 219, 33);
 }
+.Pro{ background-color: skyblue;
+
+}
 
 .kep{
     max-width: 20rem;
@@ -65,6 +68,15 @@ body{
     width:80%;
     float: right;
 }
+
+.Prof{
+    color: indigo;
+    font-family:'Sansita Swashed' ;
+    font-size: 25px;
+    margin-top: 5rem;
+    text-indent: 3rem;
+}
+
 .Be{
     color:rgb(30, 255, 0);
     font-family:'Sansita Swashed' ;

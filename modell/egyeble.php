@@ -3,6 +3,7 @@ class Egyeb {
     private $Termek_azonosito; 
     private $Termek_nev;
     private $username;
+    private $F_Id;
     private $Ar;
     private $kep;
     private $id;
@@ -10,7 +11,7 @@ class Egyeb {
  
     public function set_egyeb($id, $conn) {
 
-        $sql = "SELECT Termek_azonosito,Termek_nev,username,Ar,kep,id,main_kat FROM egyeb_termekek INNER JOIN felhasznalok ON egyeb_termekek.F_Id=felhasznalok.F_Id 
+        $sql = "SELECT Termek_azonosito,Termek_nev,username,egyeb_termekek.F_Id,Ar,kep,id,main_kat FROM egyeb_termekek INNER JOIN felhasznalok ON egyeb_termekek.F_Id=felhasznalok.F_Id 
         INNER JOIN Termekek ON Termekek.T_id=egyeb_termekek.Termek_azonosito";
         $sql .= " WHERE id = $id ";
         $result = $conn->query($sql);
@@ -20,6 +21,7 @@ class Egyeb {
                 $this->Termek_azonosito = $row['Termek_azonosito'];
                 $this->Termek_nev = $row['Termek_nev'];
                 $this->username = $row['username'];
+                $this->F_Id = $row['F_Id'];
                 $this->Ar = $row['Ar'];
                 $this->kep = $row['kep'];
                 $this->id = $row['id'];
@@ -41,6 +43,9 @@ class Egyeb {
     }
     public function get_username() {
         return $this->username;
+    }
+    public function get_F_Id() {
+        return $this->F_Id;
     }
     public function get_Ar() {
         return $this->Ar;

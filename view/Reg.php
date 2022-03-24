@@ -4,6 +4,7 @@
         echo $loginerrorr;
         echo $loginerorr;
         echo $loginEror;
+        echo $hosszu;
         ?>
         <span id = "message" > </span>
         <br>

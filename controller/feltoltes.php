@@ -7,6 +7,7 @@ $kat="";
 $alkat="";
 $nev="";
 $ar="";
+$nemaz="";
 if(isset($_POST['submit'])){
   if(!empty($_POST['Termek_nev']) and !empty($_POST['Ar']) ){
     if((isset($_POST['Kat']) and $_POST['Kat']=='egyeb_termekek' ) or (isset($_POST['Kat']) and isset($_POST['Al_Kat']))){
@@ -34,10 +35,13 @@ if(isset($_POST['submit'])){
 
       foreach($_FILES["fileToUpload"]["name"] as $key => $name){
       $target_file = $target_dir . basename($name);
-
-      if (!in_array($_FILES["fileToUpload"]["type"][$key], $allowd_filetypes)){
-          $errors[$key][] = "A $name file nem jpg / png / jpeg";
-      }elseif(!isset($errors[$key])){
+      
+      if($_FILES['fileToUpload']['name'][$key]==""){
+        $nemaz="Nem választottál ki képet!";
+      }elseif (!in_array($_FILES["fileToUpload"]["type"][$key], $allowd_filetypes)){
+          $nemaz = "A $name file nem jpg / png / jpeg";
+      }
+      if($nemaz==""){
         if(isset($_POST['Kat']) and $_POST['Kat']!="egyeb_termekek" and !empty($_POST['Termek_nev']) and !empty($_POST['Ar'])){
           if (@move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$key] , $target_file)){
             $i ++;
@@ -50,7 +54,7 @@ if(isset($_POST['submit'])){
               $asd='tazo_kat';
             }
             $sql = "INSERT INTO ".$_POST['Kat']." (Termek_azonosito,Termek_nev,F_Id,Ar,K_id,kep)
-            VALUES ((select T_id from Termekek where main_kat like '".$_POST['Kat']."'),' ".$_POST['Termek_nev']."', ".$_SESSION['F_Id'].",".$_POST['Ar'].",(select id from ".$asd." where nev like '".$_POST['Al_Kat']."'),'" .$target_file."')";
+            VALUES ((select T_id from Termekek where main_kat like '".$_POST['Kat']."'),' ".htmlspecialchars($_POST['Termek_nev'])."', ".$_SESSION['F_Id'].",".$_POST['Ar'].",(select id from ".$asd." where nev like '".$_POST['Al_Kat']."'),'" .$target_file."')";
         
             if ($conn->query($sql) === TRUE) {
               header("location:index.php?page=termekek");
@@ -76,16 +80,17 @@ if(isset($_POST['submit'])){
       $allowd_filetypes =array('image/png','image/jpg','image/jpeg');
       foreach($_FILES["fileToUpload"]["name"] as $key => $name){
       $target_file = $target_dir . basename($name);
-
-      if (!in_array($_FILES["fileToUpload"]["type"][$key], $allowd_filetypes)){
-          $errors[$key][] = "A $name file nem jpg / png / jpeg";
+      if($_FILES['fileToUpload']['name'][$key]==""){
+        $nemaz="Nem választottál ki képet!";
+      }elseif (!in_array($_FILES["fileToUpload"]["type"][$key], $allowd_filetypes)){
+          $nemaz = "A $name file nem jpg / png / jpeg";
       }
-      if(!isset($errors[$key])){
+      if($nemaz==""){
           if (@move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$key] , $target_file)){
           $i ++;
           if(isset($_POST['Kat']) and $_POST['Kat']=="egyeb_termekek" and !empty($_POST['Termek_nev']) and !empty($_POST['Ar'])){
   $sql = "INSERT INTO egyeb_termekek (Termek_azonosito,Termek_nev,F_Id,Ar,kep)
-      VALUES ((select T_id from Termekek where main_kat like '".$_POST['Kat']."'),' ".$_POST['Termek_nev']."', ".$_SESSION['F_Id'].",".$_POST['Ar'].",'". $target_file."')";
+      VALUES ((select T_id from Termekek where main_kat like '".$_POST['Kat']."'),' ".htmlspecialchars($_POST['Termek_nev'])."', ".$_SESSION['F_Id'].",".$_POST['Ar'].",'". $target_file."')";
 
       if ($conn->query($sql) === TRUE) {
           header("location:index.php?page=termekek");
@@ -100,7 +105,6 @@ if(isset($_POST['submit'])){
       }
     
     }
-    else $kep="Nincs kép kiválasztva" ;
 
   }else if(!isset($_POST['Kat'])){
     $kat="Nem választottál ki Kategóriát";

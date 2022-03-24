@@ -3,6 +3,7 @@ class Penz {
     private $Termek_azonosito; 
     private $Termek_nev;
     private $username;
+    private $F_Id;
     private $Ar;
     private $K_id;
     private $kep;
@@ -11,7 +12,7 @@ class Penz {
 
     public function set_penz($id, $conn) {
 
-        $sql = "SELECT Termek_azonosito,Termek_nev,username,Ar,K_id,kep,id,main_kat FROM penznem INNER JOIN felhasznalok ON penznem.F_Id=felhasznalok.F_Id
+        $sql = "SELECT Termek_azonosito,Termek_nev,username,penznem.F_Id,Ar,K_id,kep,id,main_kat FROM penznem INNER JOIN felhasznalok ON penznem.F_Id=felhasznalok.F_Id
         INNER JOIN Termekek ON Termekek.T_id=penznem.Termek_azonosito";
         $sql .= " WHERE id = $id ";
         $result = $conn->query($sql);
@@ -21,6 +22,7 @@ class Penz {
                 $this->Termek_azonosito = $row['Termek_azonosito'];
                 $this->Termek_nev = $row['Termek_nev'];
                 $this->username = $row['username'];
+                $this->F_Id = $row['F_Id'];
                 $this->Ar = $row['Ar'];
                 $this->K_id = $row['K_id'];
                 $this->kep = $row['kep'];
@@ -42,6 +44,9 @@ class Penz {
     }
     public function get_username() {
         return $this->username;
+    }
+    public function get_F_Id() {
+        return $this->F_Id;
     }
     public function get_Ar() {
         return $this->Ar;
