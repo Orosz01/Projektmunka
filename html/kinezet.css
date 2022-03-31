@@ -2,6 +2,8 @@ body{
     margin-top: 4.6rem !important;
 }
 .Fo{ background-color: rgb(235, 207, 51);
+    position: relative;
+    font-family:'Sansita Swashed' ; 
 }
 .Te{ background-color: rgb(206, 149, 27);
 }
@@ -75,6 +77,38 @@ body{
 
 .luk{
     margin-top: 0.5%;
+}
+
+#alchat{
+    border: 1px double rgb(28, 28, 194) ;
+    width: 30%;
+    position:fixed;
+    bottom:0.5rem;
+    left: 0.5rem;
+    background-color: darkgoldenrod;
+    font-family:'Sansita Swashed' ;
+}
+
+#uzik{
+    color: darkblue;
+    
+}
+
+.chat{
+    margin: 0.75rem;
+    width: 75%;
+    border-radius: 3px;
+    background-color:deepskyblue ;
+    color:darkred;
+    border: 1px solid dodgerblue;
+    overflow-y: scroll;
+    resize: none;
+}
+
+#chati{
+    border-radius: 5px;
+    color: darkviolet;
+    background-color: darksalmon;
 }
 
 .flex-container{

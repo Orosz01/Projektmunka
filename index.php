@@ -5,6 +5,7 @@ require 'modell/user.php';
 require 'modell/egyeble.php';
 require 'modell/kartyale.php';
 require 'modell/penzle.php';
+require 'modell/uzik.php';
 require 'modell/tazole.php';
 require 'includes/header.inc.php';
 
@@ -13,6 +14,7 @@ $egyeb = new Egyeb;
 $kartya = new Kartya;
 $penz = new Penz;
 $tazo = new Tazo;
+$uzi = new Uzik;
 
 $page="fooldal";
 $category="";
