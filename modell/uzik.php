@@ -36,7 +36,7 @@ class Uzik {
     public function get_uzi_id() {
         return $this->uzi_id;
     }
-    public function uzik($conn) {
+    public function uzikle($conn) {
         $lista = array();
         $sql = "SELECT uzi_id FROM uzenetek";
         if($result = $conn->query($sql)) {

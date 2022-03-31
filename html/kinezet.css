@@ -87,10 +87,12 @@ body{
     left: 0.5rem;
     background-color: darkgoldenrod;
     font-family:'Sansita Swashed' ;
+    max-height:30rem;
 }
 
+
 #uzik{
-    color: darkblue;
+    color: rgb(5, 5, 197);
     
 }
 

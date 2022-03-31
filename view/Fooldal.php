@@ -12,12 +12,14 @@
                 if($uziid){
                     foreach($uziid as $uzik) {
                         $uzi->set_uzi($uzik,$conn);
-                echo '<div id="uzik">'.$uzi->get_username().','.$uzi->get_uzi().'</div>';
+                echo '<div id="uzik">'.$uzi->get_username().': '.$uzi->get_uzi().'</div>';
                     }
                 }
             ?>
+          
         <input type="textarea" class="chat" name="uzi">
         <input type="submit" id="chati" name="kuld" value="Küld"> 
+       
     </form>
     <?php
     }

@@ -1,6 +1,6 @@
 <?php
 
-include "view/Fooldal.php";
+ $uziid=$uzi->uzikle($conn);
 
     if(isset($_POST['kuld'])){
         if(!empty($_POST['uzi'])){       
@@ -10,5 +10,5 @@ include "view/Fooldal.php";
         }
     }
     
-    $uziid=$uzi->uzik($conn);
+   include "view/Fooldal.php";
 ?>
