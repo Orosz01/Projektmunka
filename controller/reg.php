@@ -35,6 +35,6 @@ if(isset($_POST['username']) and isset($_POST['pasword']) and isset($_POST['pasw
         $conn->close();
     }
 }
-include "view/Reg.php"
+include "view/Reg.php";
 
 ?>
