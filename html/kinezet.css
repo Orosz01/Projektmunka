@@ -81,36 +81,36 @@ body{
 
 #alchat{
     border: 1px double rgb(28, 28, 194) ;
-    width: 30%;
-    position:fixed;
-    bottom:0.5rem;
-    left: 0.5rem;
     background-color: darkgoldenrod;
     font-family:'Sansita Swashed' ;
-    max-height:30rem;
+    width: 35%;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    position:fixed;
 }
-
 
 #uzik{
     color: rgb(5, 5, 197);
-    
+    max-height: 25rem;
 }
 
-.chat{
-    margin: 0.75rem;
-    width: 75%;
+#bevit{
+width: 100%;
+}
+
+.chat {
+    margin:0.5rem;
     border-radius: 3px;
-    background-color:deepskyblue ;
-    color:darkred;
-    border: 1px solid dodgerblue;
-    overflow-y: scroll;
-    resize: none;
+    background-color:deepskyblue  ;
+    color:darkred ;
+    border: 1px solid dodgerblue ;
+    width: 80%;
 }
 
 #chati{
-    border-radius: 5px;
-    color: darkviolet;
-    background-color: darksalmon;
+    border-radius: 5px ;
+    color: darkviolet ;
+    background-color: darksalmon ;
 }
 
 .flex-container{

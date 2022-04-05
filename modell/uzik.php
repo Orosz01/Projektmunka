@@ -38,7 +38,7 @@ class Uzik {
     }
     public function uzikle($conn) {
         $lista = array();
-        $sql = "SELECT uzi_id FROM uzenetek";
+        $sql = "SELECT uzi_id FROM uzenetek ORDER BY uzi_id DESC limit 30";
         if($result = $conn->query($sql)) {
             if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
