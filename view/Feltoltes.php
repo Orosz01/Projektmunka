@@ -24,7 +24,7 @@
         <input type="radio"  id="Tazok" name="Kat" value="tazok">
         <label for="Tazok" class="gombok">Tazók</label>
         <input type="radio"  id="Egyeb_termekek" name="Kat" value="egyeb_termekek">
-        <label for="Egyeb Termekek" class="gombok">Egyéb Termekek</label><br>
+        <label for="Egyeb Termekek" class="gombok">Egyéb Termékek</label><br>
 
         <div class="hide1">
         <p class="luk">Válaszd ki a terméked al-kategóriáját</p>

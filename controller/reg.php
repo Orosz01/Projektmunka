@@ -24,7 +24,7 @@ if(isset($_POST['username']) and isset($_POST['pasword']) and isset($_POST['pasw
     }elseif($loginEror == "" && $loginerorr == "" && $loginerrorr == ""){
     
         $sql ="INSERT INTO felhasznalok(username, pasword, email)
-        VALUES ('".mysqli_real_escape_string($conn,$_POST['username'])."','".md5($_POST['pasword'])."','".mysqli_real_escape_string($conn,$_POST['email'])."')";
+        VALUES ('".htmlspecialchars(mysqli_real_escape_string($conn,$_POST['username']))."','".md5($_POST['pasword'])."','".htmlspecialchars(mysqli_real_escape_string($conn,$_POST['email']))."')";
 
         if($conn->query($sql) == TRUE){
             echo "success";
