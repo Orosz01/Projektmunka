@@ -51,11 +51,5 @@ class User{
     return $lista;
 }
 }
-//$tanulo->get_id();
-//$tanulo->get_nev();
-//$tanulo->get_sor();
-//$tanulo->get_oszlop();
-//$tanulo->get_jelszo();
-//$tanulo->get_felhasznalo();
 
 ?>
