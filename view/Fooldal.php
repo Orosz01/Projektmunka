@@ -1,4 +1,4 @@
-<body class="Fo">
+<body id="Fo">
     <h1>Üdv a gyűjtőknek szánt keresekedő oldalon </h1>
     <p>Remélem megtalálod azt amit keresel vagy épp meg tudsz válni valamitől ami már nem fontos számodra, s ezzel gyarapítod mások gyűjteményét.</p>
 
@@ -64,4 +64,4 @@
         setInterval(load_chat,3000);
 
         </script>
-</body>
+

@@ -53,4 +53,3 @@
             <input type="file" name = "fileToUpload[]" id = "fileToUpload" id="uplo"><br>
             <div class="upi"><input type ="submit" value ="Termék feltöltése" name="submit" id="uplo"><br></div>
         </form>
-</body>

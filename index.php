@@ -43,12 +43,13 @@ $menupontok = array('fooldal' => "Főoldal",
 $title = $menupontok[$page];
 ?>
 
-<body>
+
+
 <?php
 
 include 'controller/'.$page.'.php';
 include 'includes/menu.inc.php';
 
 ?>
-
 </body>
+</html>

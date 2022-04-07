@@ -10,4 +10,3 @@
         <input type="password" class="area" id="password" name="pasword"><br><br>
         <input type="submit" id="submit" value="Bejelentkezés"> 
     </form>
-</body>
