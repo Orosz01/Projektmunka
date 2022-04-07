@@ -12,12 +12,7 @@
                 $a=0;
                 echo '<div id="uzik" style="overflow:scroll">';
                 
-                if($uziid){
-                    for($i=count($uziid)-1;$i>=0;$i--){
-                        $uzi->set_uzi($uziid[$i],$conn);
-                        echo $uzi->get_username().': '.$uzi->get_uzi().'<br>';
-                    }
-                }
+               
                 echo '</div>';
             ?>
           <div id="bevit">
@@ -29,4 +24,44 @@
     <?php
     }
     ?>
+   
+    <script>
+        load_chat();
+        
+        function gorgetes(){
+            var iHeight = $("#uzik").prop("scrollHeight");
+            $(document).ready(function() {
+                document.getElementById("uzik").scrollTop =iHeight;
+            });
+        }
+
+
+        function load_chat(){
+            $.ajax({
+
+                url:"controller/chatlekeres.php",
+
+                method:"POST",
+
+                data:{action:'chat'},
+
+                dataType:"JSON",
+
+                success:function(data)
+
+                {
+                    var szoveg="";
+                    for(i=0;i<data.length;i++){
+                        szoveg+=data[i]['uzenet'];
+                    }
+                    $("#uzik").html(szoveg);
+                    gorgetes();
+                }  
+
+            })
+
+        }
+        setInterval(load_chat,3000);
+
+        </script>
 </body>

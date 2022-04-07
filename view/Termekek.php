@@ -219,6 +219,7 @@
         }
 ?>
       <script>
+   
         function openNav() {
           document.getElementById("mySidenav").style.width = "160px";
         }
