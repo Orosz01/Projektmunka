@@ -7,7 +7,8 @@
              echo $alkat ;
              echo $nev ; 
              echo $ar ;
-             echo $nemaz;
+             echo $nemaz ;
+             echo $negativ ;
             ?>
             <br>
             <br>
