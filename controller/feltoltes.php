@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
             }elseif($_POST['Kat']=="tazok"){
               $asd='tazo_kat';
             }
-            if(strpos($_POST['Ar'],"-")>=0){
+            if(strpos($_POST['Ar'],"-")===0){
               $negativ="Nem adhatsz meg negatív árat <br>";
             }else{
             $sql = "INSERT INTO ".$_POST['Kat']." (Termek_azonosito,Termek_nev,F_Id,Ar,K_id,kep)
@@ -95,9 +95,9 @@ if(isset($_POST['submit'])){
           if (@move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$key] , $target_file)){
           $i ++;
           if(isset($_POST['Kat']) and $_POST['Kat']=="egyeb_termekek" and !empty($_POST['Termek_nev']) and !empty($_POST['Ar'])){
-            if(strpos($_POST['Ar'],"-")>=0){
-              $negativ="Nem adhatsz meg negatív árat <br>";}
-              else{
+            if(strpos($_POST['Ar'],"-")===0){
+              $negativ="Nem adhatsz meg negatív árat <br>";
+            }else{
   $sql = "INSERT INTO egyeb_termekek (Termek_azonosito,Termek_nev,F_Id,Ar,kep)
       VALUES ((select T_id from Termekek where main_kat like '".$_POST['Kat']."'),' ".htmlspecialchars($_POST['Termek_nev'])."', ".$_SESSION['F_Id'].",".$_POST['Ar'].",'". $target_file."')";
 
