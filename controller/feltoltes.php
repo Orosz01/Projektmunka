@@ -11,7 +11,7 @@ $nemaz="";
 $negativ="";
 if(isset($_POST['submit'])){
   if(!empty($_POST['Termek_nev']) and !empty($_POST['Ar']) ){
-   
+    
     if((isset($_POST['Kat']) and $_POST['Kat']=='egyeb_termekek' ) or (isset($_POST['Kat']) and isset($_POST['Al_Kat']))){
       $i = 0;
       $errors = array();
@@ -58,6 +58,7 @@ if(isset($_POST['submit'])){
             if(strpos($_POST['Ar'],"-")===0){
               $negativ="Nem adhatsz meg negatív árat <br>";
             }else{
+              
             $sql = "INSERT INTO ".$_POST['Kat']." (Termek_azonosito,Termek_nev,F_Id,Ar,K_id,kep)
             VALUES ((select T_id from Termekek where main_kat like '".$_POST['Kat']."'),' ".htmlspecialchars($_POST['Termek_nev'])."', ".$_SESSION['F_Id'].",".$_POST['Ar'].",(select id from ".$asd." where nev like '".$_POST['Al_Kat']."'),'" .$target_file."')";
         
@@ -66,16 +67,16 @@ if(isset($_POST['submit'])){
             }else{
               echo "Error: " . $sql . "<br>" . $conn->error;
             } 
-          }
+            }
         }
         }else{
           $errors[$key][] = "Hiba történt a $name file mentésekor<br>";
-          
-  } 
+        }
+  
         }
       }
       }else $kep="Sikerült";
-  
+      
   
       $i = 0;
       $errors = array();
