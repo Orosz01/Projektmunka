@@ -37,7 +37,7 @@ if(isset($_POST['uzi'])){
 
     if ($result->num_rows > 0) {
         
-    $termekasd=$man->get_Termek_nev();
+    $termekasd=$main->get_Termek_nev();
         foreach($result->fetch_assoc() as $key);
     $termek=$key;
     }
