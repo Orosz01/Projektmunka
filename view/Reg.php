@@ -1,10 +1,11 @@
 <body class="Re">
     <form class="Regi" action="index.php?page=reg" method="post" value="reg">
         <?php
-        echo $loginerrorr;
-        echo $loginerorr;
-        echo $loginEror;
+        echo $jelszo;
+        echo $felhasznalonev;
+        echo $email;
         echo $hosszu;
+        echo $ures;
         ?>
         <span id = "message" > </span>
         <br>
@@ -17,7 +18,7 @@
         <input type="password" class="area" id="password_again" name="pasword_again"><br>
         <label for="email">Email:</label><br>
         <input type="email" class="area" id="email" name="email"><br><br>
-        <input type="submit" id="sub" value="Regisztrál"> 
+        <input type="submit" name="reg" id="sub" value="Regisztrál"> 
         <script>
             document.getElementById('password_again').oninput=document.getElementById('password').oninput=function (){
                 if( document.getElementById('password').value != document.getElementById('password_again').value ){
